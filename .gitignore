@@ -1,0 +1,6 @@
+.sass-cache
+/source/_cache/*
+/web
+Thumbs.db
+.DS_Store
+!.gitkeep

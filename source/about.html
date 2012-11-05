@@ -1,0 +1,23 @@
+---
+layout: default
+title: About me
+slug: about-me
+position: 3
+---
+<h1>This is a sample page</h1>
+
+With Jekyll, you don't *have to* blog, you can just create plain simple pages like this one for whatever you want.
+
+<div class="row-fluid">
+    <ul class="thumbnails">
+      {% for i in (1..4) %}
+        <li class="span3">
+          <div class="thumbnail">
+            <img src="http://placehold.it/260x180" alt="">
+            <h3>Thumbnail label {{ i }}</h3>
+            <p>Thumbnail caption for {{ i }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+</div>

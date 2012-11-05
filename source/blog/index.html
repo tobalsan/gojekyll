@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+slug: blog
+position: 2
+---
+<section class="content">
+  <h2>Blog entries</h2>
+  <p>Check out my articles below !</p>
+</section>
+<ul class="entries">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">
+      <h3>{{ post.title }}</h3>
+      <img src="{{ post.image }}" />
+    </a>
+  </li>
+  {% endfor %}
+</ul>
