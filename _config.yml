@@ -6,9 +6,9 @@ destination: ./web
 permalink: /blog/:title.html
 
 # Special markdown plugin to use GitHub flavord syntax highlighting and fenced code blocks
-markdown: redcarpet2
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+markdown: redcarpet
+# redcarpet:
+#   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 
 # Site-wide parameters
 production_url: http://mywebsite.com
