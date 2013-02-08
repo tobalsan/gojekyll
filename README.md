@@ -8,6 +8,7 @@ It is widely inspired from JekyllBootstrap and Octopress. Although i really foun
 GoJekyll does not nearly have all the fancy stuff you'd exepct from the two i mentionned above. It's only simple jekyll pre-packaged with:
 
 - Compass / Sass
+- Twitter Bootstrap
 - A custom _config.yml for fast and useful configuration
 - Redcarpet2 plugin to enable use of **Github Flavored Syntaxt Highlighting** and **fenced code blocks**
 - A `Rakefile` to spare boring tasks (create pages and posts, i.e `compass watch` and `jekyll --server`)
