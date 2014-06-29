@@ -1,5 +1,4 @@
 # Site base configuration
-auto: true
 source: ./source
 plugins: ./source/_plugins
 destination: ./web

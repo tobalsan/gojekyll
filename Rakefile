@@ -72,7 +72,8 @@ task :watch do
   raise "### Woops, seems like you have no 'source' directory." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
   system "compass compile" unless File.exist?("#{source_dir}/css/style.css")
-  jekyllPid = Process.spawn("jekyll --auto --server")
+  system "jekyll build"
+  jekyllPid = Process.spawn("jekyll serve --watch")
   compassPid = Process.spawn("compass watch")
 
   trap("INT") {

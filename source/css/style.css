@@ -15,7 +15,7 @@ a img { border: none; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 
-/*
+/*!
  * Bootstrap v2.2.1
  *
  * Copyright 2012 Twitter, Inc
@@ -1874,7 +1874,7 @@ a.label:hover, a.badge:hover { color: #ffffff; text-decoration: none; cursor: po
 
 .affix { position: fixed; }
 
-/*
+/*!
  * Bootstrap Responsive v2.2.1
  *
  * Copyright 2012 Twitter, Inc
