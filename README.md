@@ -19,6 +19,11 @@ Simply clone this repo
 
     $ git clone git://github.com/tobalsan/gojekyll.git myblog
 
+If it's the first time you're going to use Jekyll, then you should make sure that:
+  - you are using **Ruby > 1.9.3**
+  - you installed the Jekyll gem: `gem install Jekyll` (you might have to run `gem update --system` first)
+  - you have the Compass gem: `gem install compass`
+
 From there, you're all set to go. Simple tasks are as following:
 
 ### Create a post
@@ -29,16 +34,15 @@ Same as Jekyllbootstrap
 
 ### Create a page
 
-    $ rake page name="my-new-page.md"
+Same as post:
 
-Notice here, the argument is the file name, as opposed to the post creation where we specify a title. Thus, use a sluggish name (i.e no spaces or fancy characters).
+    $ rake page title="My wonderful page"
 
 ### Launch Jekyll preview server and compass watch
 
     $ rake watch
 
-This will launch both `compass watch` to check for any css modification, and `jekyll --auto --server` so you can preview your change at `http://localhost:4000` while having Jekyll watch for anyc change you make in your source code.
-
+This will launch both `compass watch` to check for any css modification, and `jekyll build && jekyll serve --watch` so you can preview your change at `http://localhost:4000` while having Jekyll watch for anyc change you make in your source code.
 
 ## Deployment
 
