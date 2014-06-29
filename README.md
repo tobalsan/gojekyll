@@ -24,6 +24,9 @@ If it's the first time you're going to use Jekyll, then you should make sure tha
   - you installed the Jekyll gem: `gem install Jekyll` (you might have to run `gem update --system` first)
   - you have the Compass gem: `gem install compass`
 
+GoJekyll also uses [Bootstrap 3](http://getbootstrap.com/) with Compass, so you have to install the [bootstrap-sass](https://github.com/twbs/bootstrap-sass) gem: `gem install bootstrap-sass` .
+(do NOT run `compass install bootstrap` like it's mentionned in the bootstrap-sass doc though, as it's been taken care of already).
+
 From there, you're all set to go. Simple tasks are as following:
 
 ### Create a post
