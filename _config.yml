@@ -1,8 +1,10 @@
 # Site base configuration
 source: ./source
-plugins: ./source/_plugins
+plugins_dir: ./source/_plugins
+gems: ["jekyll-paginate"]
 destination: ./web
 permalink: /blog/:title.html
+header-img: img/home-bg.jpg
 
 # Special markdown plugin to use GitHub flavord syntax highlighting and fenced code blocks
 markdown: redcarpet
@@ -12,7 +14,10 @@ markdown: redcarpet
 # Site-wide parameters
 production_url: http://mywebsite.com
 title: GoJekyll !
-desc: Welcome to my GoJekyll ! website
+description: Site-wide description
+baseurl: ""
+url: "http://yourdomain.com"
+paginate: 10
 
 # Customization parameters
 show_title: true
@@ -20,3 +25,10 @@ show_home_link: true
 
 # Use 'exclude' configuration to exclude specific files or folders
 # exclude: sass, config.rb
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+## Theme settings
+email: tobalsan@gmail.com
+twitter_username: tobalsan
+github_username:  tobalsan
+facebook_username:  thinh.san

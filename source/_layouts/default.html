@@ -1,19 +1,16 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <title>{% if page.title %}{{ page.title }} :: {% endif %}The NewJekyll Site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+{% include head.html %}
+
 <body>
+
     {% include nav.html %}
 
-    <div class="container">
-        {{ content }}
-    </div>
+    {{ content }}
 
     {% include footer.html %}
+
 </body>
+
 </html>

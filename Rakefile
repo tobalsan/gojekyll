@@ -36,6 +36,10 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
+    post.puts "subtitle: \"I am a pretty post subtitle\""
+    post.puts "date: #{date}"
+    post.puts "author: \"Post Author\""
+    post.puts "header-img: \"img/post-bg-06.jpg\""
     post.puts "categories: # <!-- Categories (plural key) can be specified as a YAML list or a space-separated string, else use 'category' -->"
     post.puts "tags: # <!-- Similar to categories, one or multiple tags can be added to a post. Tags can be specified as a YAML list or a space-separated string -->"
     post.puts "---"
@@ -61,6 +65,8 @@ task :page do
     post.puts "---"
     post.puts "layout: page"
     post.puts "title: \"#{title}\""
+    post.puts "description: \"Have questions? I have answers (maybe).\""
+    post.puts "header-img: \"img/contact-bg.jpg\""
     post.puts "position: 1"
     post.puts "slug: #{slug}"
     post.puts "---"
@@ -71,17 +77,16 @@ desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "### Woops, seems like you have no 'source' directory." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
-  system "compass compile" unless File.exist?("#{source_dir}/css/style.css")
-  system "jekyll build"
+  # system "compass compile" unless File.exist?("#{source_dir}/css/style.css")
   jekyllPid = Process.spawn("jekyll serve --watch")
-  compassPid = Process.spawn("compass watch")
+  # compassPid = Process.spawn("compass watch")
 
   trap("INT") {
-    [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    [jekyllPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
     exit 0
   }
 
-  [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
+  [jekyllPid].each { |pid| Process.wait(pid) }
 end
 
 
