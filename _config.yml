@@ -13,7 +13,7 @@ markdown: redcarpet
 
 # Site-wide parameters
 production_url: http://mywebsite.com
-title: GoJekyll !
+title: GoJekyll!
 description: Site-wide description
 baseurl: ""
 url: "http://yourdomain.com"
@@ -28,7 +28,7 @@ show_home_link: true
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 ## Theme settings
-email: tobalsan@gmail.com
-twitter_username: tobalsan
-github_username:  tobalsan
-facebook_username:  thinh.san
+email: your@email.com
+twitter_username: twitterhandle
+github_username:  githubusername
+facebook_username:  facebook.username
