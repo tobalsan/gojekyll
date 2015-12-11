@@ -5,10 +5,11 @@ require 'time'
 
 SOURCE = "source"
 CONFIG = {
-  'version' => "0.1",
-  'layouts' => File.join(SOURCE, "_layouts"),
-  'posts' => File.join(SOURCE, "_posts"),
-  'post_ext' => "md",
+  'version'      => "0.1",
+  'layouts'      => File.join(SOURCE, "_layouts"),
+  'posts'        => File.join(SOURCE, "_posts"),
+  'post_ext'     => "md",
+  'posts_author' => 'You',
 }
 
 public_dir      = "web"       # compiled site directory
@@ -35,13 +36,13 @@ task :post do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts "subtitle: \"I am a pretty post subtitle\""
+    post.puts "title: #{title.gsub(/-/,' ')}"
+    post.puts "subtitle: I am a pretty post subtitle"
     post.puts "date: #{date}"
-    post.puts "author: \"Post Author\""
+    post.puts "author: #{CONFIG['posts_author']}"
     post.puts "header-img: \"img/post-bg-06.jpg\""
-    post.puts "categories: # <!-- Categories (plural key) can be specified as a YAML list or a space-separated string, else use 'category' -->"
-    post.puts "tags: # <!-- Similar to categories, one or multiple tags can be added to a post. Tags can be specified as a YAML list or a space-separated string -->"
+    post.puts "<!-- categories: # <!-- Categories (plural key) can be specified as a YAML list or a space-separated string, else use 'category' -->"
+    post.puts "<!-- tags: # <!-- Similar to categories, one or multiple tags can be added to a post. Tags can be specified as a YAML list or a space-separated string -->"
     post.puts "---"
   end
 end # task :post
@@ -64,8 +65,8 @@ task :page do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: page"
-    post.puts "title: \"#{title}\""
-    post.puts "description: \"Have questions? I have answers (maybe).\""
+    post.puts "title: #{title}"
+    post.puts "description: Have questions? I have answers (maybe)."
     post.puts "header-img: \"img/contact-bg.jpg\""
     post.puts "position: 1"
     post.puts "slug: #{slug}"
